@@ -1,1 +1,12 @@
 # Time-Series-Analysis-Techniques
+
+## How to get data
+1. Install Quandl as `pip install quandl`
+2. Use following snippet to download data:
+```
+import quandl
+data = quandl.get("WIKI/AAPL",start_date="2001-01-01",end_date="2018-12-31",collapse="daily")
+data = data[['Adj. Open','Adj. High','Adj. Low','Adj. Close','Adj. Volume']]
+data.rename(columns={'Adj. Open':'Open','Adj. High':'High','Adj. Low':'Low','Adj. Close':'Close','Adj. Volume':'Volume'},inplace=True)
+data.to_csv('APPL.csv',index=True)
+```
