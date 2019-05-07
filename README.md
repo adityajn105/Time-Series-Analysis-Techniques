@@ -57,10 +57,15 @@ c = a constant,
 To fit data to an ARMA model, we use the Akaike Information Criterion (AIC)across a subset of values for p,q to find the model with minimum AIC and then apply the Ljung-Box test to determine if a good fit has been achieved, for particular values of p,q. If the p-value of the test is greater the required significance, we can conclude that the residuals are independent and white noise.
 
 ### 3. ARIMA - Autoregression Integrated Moving Average
-ARIMA is a natural extension to the class of ARMA models—they can reduce a non-stationary series to a stationary series using a sequence of differences.
+ARIMA is a natural extension to the class of ARMA models—they can reduce a non-stationary series to a stationary series using a sequence of differences. We’ve seen that many of our Time Series are not stationary, however they can be made stationary by differencing.
+ARIMA essentially performs same function, but does so repeatedly, d times, in order to reduce a non-stationary series to a stationary one.
+A time series x(t) is ARIMA(p,d,q) model if the series is differenced d times, and it then follows an ARMA(p,q) process.
 
 
 ## Must Read
 [Basics of TimeSeries Analysis](https://medium.com/auquan/time-series-analysis-for-financial-data-part-1-stationarity-autocorrelation-and-white-noise-1a1cc2fb23f2)
 [ARMA explained](https://medium.com/auquan/time-series-analysis-for-finance-arma-models-21695e14c999)
 [ARIMA explained](https://medium.com/auquan/time-series-analysis-for-finance-arima-models-acb5e39999df)
+[TSA Techniqes](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/)
+[Forecasting Tutorial](https://machinelearningmastery.com/make-sample-forecasts-arima-python/)
+[Forecassting Tutorial](https://towardsdatascience.com/forecasting-exchange-rates-using-arima-in-python-f032f313fc56)
